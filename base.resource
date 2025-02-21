@@ -9,3 +9,6 @@ Resource    resources/locators/variaveis.resource
 
 ### Utils
 Resource    resources/utils/login.resource
+
+### Pages
+Resource    resources/pages/add_card_v2.robot

@@ -62,7 +62,8 @@ Login User Gui
  #   Click Element    ${btns_Allow}
     Wait Until Element Is Visible    ${noticacaoes}
     Click Element    ${noticacaoes}
-    Click Element    //android.widget.Button[@content-desc="Não quero ativar biometria"]
+    Wait Until Element Is Visible    ${btn_nao_ativa_biometria}
+    Click Element    ${btn_nao_ativa_biometria}
 
 Login User Teste 287
     [Setup]    OpenEucard

@@ -43,14 +43,12 @@ ${erro_codigo_barras}    //android.widget.TextView[@text="Erro na conversao de L
 ${scroll_conta}    //android.widget.TextView[@text="Pagar conta"]
 ${scroll_valor}    //android.widget.TextView[@text="Valor"]
 
-
 #Variaveis da transferência Fluxo: home/ transferencia
 ${btn_transferencia}    //android.widget.TextView[@text="Transferência"]
 ${conta_destino}     //android.widget.TextView[@text="Eucard"]
 ${select_debit_card}    //android.widget.TextView[@text="•••• 0513 | Débito"]
 ${btn_finalizar_transferencia}    //android.widget.TextView[@text="Finalizar transferência"]
 ${comprovante_transferencia}    //android.widget.TextView[@text="Comprovante de transferência"]
-
 
 #Variaveis de transferência Fluxo: Selecionar cartão carrosel/ Selecionar Serviços / Transferencia.
 ${multi_credito_0513}    //android.widget.TextView[@resource-id="homeBalance-0513-Crédito"]
@@ -117,3 +115,16 @@ ${senha_atual_cartao}    //android.widget.EditText[@text="Senha atual"]
 ${senha_nova_cartao}    //android.widget.EditText[@text="Nova senha"]
 ${confirmar_senha_cartao}    //android.widget.EditText[@text="Confirmação de senha"]
 ${btn_confirmar_alterar_senha}    //android.widget.TextView[@text="Alterar senha"]
+
+
+# Modais de Abertura do app
+${btn_nao_ativa_biometria}    //android.widget.TextView[@text="Não quero ativar biometria"]
+
+# Swaipe no carroeusel de cartões 
+${swaipe_cartoes_direita}    //android.widget.HorizontalScrollView/android.view.ViewGroup/android.widget.Button[1]
+
+# Elementos para teste de asserticos
+${assert_sucesso_add_card}    //android.widget.TextView[@text="Sucesso"]
+${assert_sucesso_de_card}    //android.widget.TextView[@text="Cartão adicionado com sucesso"]
+${assert_sucesso_bloqueio}    //android.widget.TextView[@text="Cartão bloqueado com sucesso"]
+${assert_sucesso_desbloqueio}    //android.widget.TextView[@text="Cartão desbloqueado com sucesso"]
