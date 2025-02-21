@@ -1,2 +1,0 @@
-login:
-  texto_tela_login: //android.widget.EditText[@text="Digite seu CPF"]
