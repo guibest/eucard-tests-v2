@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-02-21T14:44:59.367462" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes Eucard" source="/Users/guilhermebatistell/PycharmProjects/eucard-auto-v1/test/testes_eucard.robot">
+<test id="s1-t1" name="Cenário: Abrir appActivito" line="7">
+<kw name="OpenEucard" owner="openApp">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=127.0.0.1:4723</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>platformversion=15</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appWaitPackage=br.com.eucard</arg>
+<arg>appPackage=br.com.eucard</arg>
+<arg>appWaitActivity=br.com.eucard.MainActivity</arg>
+<arg>appActivity=.MainActivity</arg>
+<arg>disableIdLocatorAutocompletion=${True}</arg>
+<arg>disableWindowAnimation=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-02-21T14:44:59.487774" elapsed="12.874865"/>
+</kw>
+<status status="PASS" start="2025-02-21T14:44:59.487310" elapsed="12.876061"/>
+</kw>
+<status status="PASS" start="2025-02-21T14:44:59.486818" elapsed="12.877288"/>
+</test>
+<status status="PASS" start="2025-02-21T14:44:59.369755" elapsed="12.995225"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testes Eucard" id="s1" pass="1" fail="0" skip="0">Testes Eucard</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

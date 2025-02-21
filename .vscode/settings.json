@@ -1,0 +1,6 @@
+{
+    "robot.pythonpath": [
+      "/path/to/venv/lib/python3.13/site-packages",
+      "/path/to/venv/lib/python3.13/site-packages/yaml/__init__.py"
+    ]
+  }
