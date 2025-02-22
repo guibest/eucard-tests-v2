@@ -4,8 +4,7 @@ Resource    ../../base.resource
 
 *** Keywords ***
 Login User anna
-    [Setup]    OpenEucard
-    [Documentation]    Realiza login utilizando as credenciais configuradas.
+
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
     Input Text   //android.widget.EditText[@text="Digite seu CPF"]   ${username_anna}   
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_padrao}
@@ -19,8 +18,7 @@ Login User anna
     Click Element    ${noticacaoes}
 
 Login User joao
-    [Setup]    OpenEucard
-    [Documentation]    Realiza login utilizando as credenciais configuradas.
+
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
     Input Text   //android.widget.EditText[@text="Digite seu CPF"]   ${username_joao}   
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_padrao}
@@ -34,8 +32,7 @@ Login User joao
     Click Element    ${noticacaoes}
 
 Login User Teste
-    [Setup]    OpenEucard
-    [Documentation]    Realiza login utilizando as credenciais configuradas.
+
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
     Input Text   //android.widget.EditText[@text="Digite seu CPF"]   ${username_conta_teste}   
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_conta_teste}
@@ -49,8 +46,7 @@ Login User Teste
     Click Element    ${noticacaoes}
 
 Login User Gui
-    [Setup]    OpenEucard
-    [Documentation]    Realiza login utilizando as credenciais configuradas.
+
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
     Input Text   //android.widget.EditText[@text="Digite seu CPF"]   ${username_gui}   
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_padrao}
@@ -66,8 +62,7 @@ Login User Gui
     Click Element    ${btn_nao_ativa_biometria}
 
 Login User Teste 287
-    [Setup]    OpenEucard
-    [Documentation]    Realiza login utilizando as credenciais configuradas.
+
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
     Input Text   //android.widget.EditText[@text="Digite seu CPF"]   287.768.810-08   
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_padrao}
@@ -79,10 +74,12 @@ Login User Teste 287
  #   Click Element    ${btns_Allow}
     Wait Until Element Is Visible    ${noticacaoes}
     Click Element    ${noticacaoes}
+    Wait Until Element Is Visible    ${btn_nao_ativa_biometria}
+    Click Element    ${btn_nao_ativa_biometria}
+
 
 Login User Sergio
-    [Setup]    OpenEucard
-    [Documentation]    Realiza login utilizando as credenciais configuradas.
+
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
         Input Text   //android.widget.EditText[@text="Digite seu CPF"]   ${username_sergio}   
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${senha_sergio}

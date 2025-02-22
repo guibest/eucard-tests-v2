@@ -90,6 +90,7 @@ ${btn_cancelar_delete_card}     //android.widget.Button[@content-desc="Cancelar"
 
 # Variaveis para Bloqueio e Desbloqueio de cartão
 ${btn_bloquear_cartao}    //android.widget.HorizontalScrollView/android.view.ViewGroup/android.widget.Button[3]
+${txt_desbloquear_cartao}=    //android.widget.TextView[contains(@text, "desbloquear") and contains(@text, "cartão")]
 ${btn_desbloquear_cartao}    //android.widget.HorizontalScrollView/android.view.ViewGroup/android.widget.Button[3]
 ${btn_confirmar_bloqueio}    //android.widget.TextView[@text="Bloquear"]
 ${btn_cancelar_bloqueio}    //android.widget.TextView[@text="Cancelar"]
