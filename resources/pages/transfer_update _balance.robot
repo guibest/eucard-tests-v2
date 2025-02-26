@@ -4,31 +4,25 @@ Resource   ../../base.resource
 
 
 
-*** Variables ***
-@{PASSWORD_PAIRS}     4 ou 9    9 ou 4    3 ou 2  2 ou 3  5 ou 8  8 ou 5  5 ou 8    8 ou 5
-${ELEMENT_XPATH}      //android.widget.TextView[contains(@text, 'ou')]
-${SELETOR_SALDO}      //android.widget.TextView[@resource-id="homeBalance-0513-Débito"]
-
 *** Keywords ***
 Transferencia
     [Documentation]    Executa uma transferência e valida o saldo atualizado
     Wait Until Element Is Visible    //android.widget.TextView[@text="Meus cartões"]
-    Selecionar Cartao Debito
-    Obter Saldo Inicial
+    Selecionar Cartao Debito e Saldo
     Realizar Transferencia
-    Digitar Senha PAD
+    Digitar Senha PED
     Finalizar Transferencia
     Validar Saldo Atualizado
 
-Selecionar Cartao Debito
+Selecionar Cartao Debito e Saldo
     Wait Until Element Is Visible    ${multi_credito_0513}
     Scroll     ${multi_debito_0513}    ${multi_credito_0513}
     Wait Until Element Is Visible    ${multi_debito_0513}
-    Click Element    ${multi_debito_0513}
-
-Obter Saldo Inicial
     ${texto_saldo_inicial}    Get Text    ${SELETOR_SALDO}
     Set Test Variable    ${texto_saldo_inicial}
+    Click Element    ${multi_debito_0513}
+
+
 
 Realizar Transferencia
     Wait Until Element Is Visible    ${btn_servicos}
@@ -46,36 +40,34 @@ Realizar Transferencia
     Wait Until Element Is Visible    ${btn_continuar}
     Click Element    ${btn_continuar}
 
-Digitar Senha PAD
+Digitar Senha PED
     # Aguarda até que os botões de senha apareçam na tela
-    Wait Until Page Contains Element    ${ELEMENT_XPATH}    timeout=40    
+    Wait Until Page Contains Element    ${ELEMENT_XPATH}    40    
 
-    # Loop para clicar em cada número/par na senha PAD
+    # Loop para verificar cada par na lista de pares (@{PASSWORD_PAIRS}).
     FOR    ${pair}    IN    @{PASSWORD_PAIRS}
-        Log    "Digitando parte da senha: ${pair}"
-
-        # Aguarda até que o elemento esteja disponível antes de clicar
-        Wait Until Keyword Succeeds    3x    1s    Clique No Elemento Dinâmico    ${pair}
-
-        # Pequeno delay para evitar que o clique não seja registrado corretamente
-        Sleep    0.5  
+        # Registra no log qual par está sendo verificado.
+        log    Verificando o PAR ${pair}
+    
+        # Tenta clicar no elemento correspondente ao par atual.
+        Clique No Elemento Dinâmico    ${pair}
     END
-
-
 
 Clique No Elemento Dinâmico
     [Arguments]    ${expected_text}
     @{elements}=    Get Webelements    ${ELEMENT_XPATH}
     ${found}=    Set Variable    False
+
     FOR    ${element}    IN    @{elements}
         ${text}=    Get Text    ${element}
-        IF    '${expected_text}' in '${text}'
-            Click Element    ${element}
-            ${found}=    Set Variable    True
-            BREAK
-        END
+
+        Run Keyword If    '${expected_text}' in '${text}'    Click Element    ${element}
+        Run Keyword If    '${expected_text}' in '${text}'    Set Variable    ${found}    True
+
     END
-    Run Keyword If    '${found}' == 'False'    Fail    "Elemento com texto '${expected_text}' não encontrado!"
+    Run Keyword If    '${found}' == False    Fail    "Nenhum elemento correspondente encontrado para ${expected_text}"
+    Log To Console    Loop acabou para ${expected_text}
+
 
 
 Finalizar Transferencia

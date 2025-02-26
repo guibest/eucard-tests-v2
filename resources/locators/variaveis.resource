@@ -2,7 +2,18 @@
 #botões com o mesmo indentificator xpath
 ${btn_continuar}    //android.widget.TextView[@text="Continuar"]
 
-#Variaveis de login 
+
+# Variaveis globais para senha PED
+
+@{PASSWORD_PAIRS}     4 ou 9    9 ou 4    3 ou 2  2 ou 3  5 ou 8  8 ou 5  5 ou 8    8 ou 5
+#@{PASSWORD_PAIRS}     7 ou 5    5 ou 7    4 ou 6  6 ou 4  0 ou 1  1 ou 0  6 ou 4    4 ou 6
+${ELEMENT_PASSWORD}      //android.widget.TextView[contains(@text, 'ou')]
+${ELEMENT_XPATH}      //android.widget.TextView[contains(@text, 'ou')]
+
+# Variaveis para update de saldo
+${SELETOR_SALDO}    //android.widget.TextView[@resource-id="homeBalance-0513-Débito"]
+
+# #Variaveis de login 
 ${username_anna}      10283336927
 ${username_joao}      46652448807
 

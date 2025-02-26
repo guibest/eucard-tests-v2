@@ -17,3 +17,7 @@ Cenário: Bloqueio Cartão
 Cenário: Transferecia e Update
     Login User Gui
     Transferencia
+
+Cenário: Pagamento de boleto
+    Login User Gui
+    Pagamento Boleto

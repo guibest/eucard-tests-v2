@@ -4,10 +4,6 @@ Resource    ../../base.resource
 
 
 
-*** Variables ***
-#@{PASSWORD_PAIRS}     4 ou 9    9 ou 4    3 ou 2  2 ou 3  5 ou 8  8 ou 5  5 ou 8    8 ou 5
-@{PASSWORD_PAIRS}     7 ou 5    5 ou 7    4 ou 6  6 ou 4  0 ou 1  1 ou 0  6 ou 4    4 ou 6
-${ELEMENT_PASSWORD}      //android.widget.TextView[contains(@text, 'ou')]
 
 *** Keywords ***
 
