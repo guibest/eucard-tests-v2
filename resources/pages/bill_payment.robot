@@ -7,9 +7,7 @@ Pagamento Boleto
 
     Wait Until Element Is Visible    ${espera_tela_inicial}
     Selecionar Pagamento Boleto
-   
     Digitar Senha PED
-   
     Finalizar Pagamento
 
 Selecionar Pagamento Boleto    

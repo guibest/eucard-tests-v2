@@ -61,10 +61,10 @@ Login User Gui
     Wait Until Element Is Visible    ${btn_nao_ativa_biometria}
     Click Element    ${btn_nao_ativa_biometria}
 
-Login User Teste 287
+Login User Teste 224
 
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
-    Input Text   //android.widget.EditText[@text="Digite seu CPF"]   287.768.810-08   
+    Input Text   //android.widget.EditText[@text="Digite seu CPF"]   224.408.850-29  
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_padrao}
     Click Element   ${botao_Entrar}
 

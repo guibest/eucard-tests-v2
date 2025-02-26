@@ -25,3 +25,6 @@ Bloqueio Cartão
     Click Element    ${btn_bloquear_cartao}
     Wait Until Element Is Visible    ${btn_confirmar_bloqueio}
     Click Element    ${btn_confirmar_bloqueio}
+
+    Wait Until Element Is Visible    ${btn_home}
+    Click Element    ${btn_home}ß

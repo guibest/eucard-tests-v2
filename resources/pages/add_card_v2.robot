@@ -33,3 +33,12 @@ Adicionar Cartão - Fluxo Completo
     Should Be Equal    ${mensagem}    Cartão adicionado com sucesso!
 
     Log To Console    ✅ Cartão adicionado com sucesso!
+Swipe Tela
+
+    ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_credito_0513}
+
+    WHILE    not ${elemento_existe}  
+         Swipe By Percent    50    30    50    60    400    
+        ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_credito_0513}
+    END  
+

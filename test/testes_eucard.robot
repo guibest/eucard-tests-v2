@@ -6,8 +6,11 @@ Test Setup    OpenEucard
 *** Test Cases ***
 
 Cenário: Add Card delet Card   
-    Login User Teste 287
+    Login User Teste 224
     Adicionar Cartão - Fluxo Completo
+    Bloqueio Cartão
+    Desbloqueio Cartão
+    Transferencia
     Excluir Cartao
 
 Cenário: Bloqueio Cartão

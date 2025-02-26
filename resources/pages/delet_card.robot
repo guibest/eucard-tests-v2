@@ -21,8 +21,12 @@ Clicar Botao Excluir
     Wait Until Element Is Visible    //android.widget.TextView[@text="Cartão excluído com sucesso"]
     ${mensagem}=    Get Text    //android.widget.TextView[@text="Cartão excluído com sucesso"]
     Log To Console    ${mensagem}
-    Should Be Equal    ${mensagem}    Cartão adicionado com sucessoß
+    Should Be Equal    ${mensagem}    Cartão adicionado com sucesso
+    Wait Until Element Is Visible    ${btn_home}
+    Click Element    ${btn_home}
 
 Clicar Botao Cancelar
     Wait Until Element Is Visible    ${btn_cancelar_delete_card}
     Click Element    ${btn_cancelar_delete_card}
+
+
