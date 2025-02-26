@@ -13,3 +13,7 @@ Cenário: Add Card delet Card
 Cenário: Bloqueio Cartão
     Login User Gui
     Bloqueio Cartão
+
+Cenário: Transferecia e Update
+    Login User Gui
+    Transferencia

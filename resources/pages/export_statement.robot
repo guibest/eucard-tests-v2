@@ -2,8 +2,6 @@
 
 Resource    ../../base.resource
 
-
-
 *** Keywords ***
 
 Exportar Extrato  

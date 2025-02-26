@@ -2,7 +2,7 @@
 Library    AppiumLibrary    timeout=30s
 
 Resource    resources/utils/openApp.resource
-Library    ../venv/lib/python3.13/site-packages/robot/libraries/String.py
+Library        String
 
 ### Variaveis
 Resource    resources/locators/variaveis.resource
