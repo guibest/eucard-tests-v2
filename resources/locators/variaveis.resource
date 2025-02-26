@@ -30,6 +30,9 @@ ${usernameErrado}    20912653061
 ${passowrdErrado}     Teste@pontos2
 ${botao_Entrar}    //android.widget.Button[@content-desc="Entrar"]
 
+#Espera tela incial
+${espera_tela_inicial}    //android.widget.TextView[@text="Meus cartões"]
+
 
 #Variaveis de tempo
 ${tempoEsperaMaxima}    120        # Tempo máximo de espera em segundos, considerando os atrasos de resposta da API

@@ -7,7 +7,7 @@ Resource   ../../base.resource
 *** Keywords ***
 Transferencia
     [Documentation]    Executa uma transferência e valida o saldo atualizado
-    Wait Until Element Is Visible    //android.widget.TextView[@text="Meus cartões"]
+    Wait Until Element Is Visible    ${espera_tela_inicial}
     Selecionar Cartao Debito e Saldo
     Realizar Transferencia
     Digitar Senha PED
