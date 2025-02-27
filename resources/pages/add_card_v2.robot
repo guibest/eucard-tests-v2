@@ -2,6 +2,12 @@
 Resource    ../../base.resource
 
 *** Keywords ***
+
+Adicionar Cartão
+    Adicionar Cartão - Fluxo Completo
+    Swipe Tela
+
+
 Adicionar Cartão - Fluxo Completo  
     [Documentation]    Adicionar novo cartão, garantindo que o scroll ocorra no carrossel correto.
 
@@ -34,7 +40,7 @@ Adicionar Cartão - Fluxo Completo
 
     Log To Console    ✅ Cartão adicionado com sucesso!
 Swipe Tela
-
+    Wait Until Element Is Visible    //android.widget.TextView[@text="Meus cartões"]     
     ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_credito_0513}
 
     WHILE    not ${elemento_existe}  

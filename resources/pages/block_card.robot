@@ -26,5 +26,5 @@ Bloqueio Cartão
     Wait Until Element Is Visible    ${btn_confirmar_bloqueio}
     Click Element    ${btn_confirmar_bloqueio}
 
-    Wait Until Element Is Visible    ${btn_home}
-    Click Element    ${btn_home}ß
+    Wait Until Element Is Visible    ${btn_home}    20
+    Click Element    ${btn_home}

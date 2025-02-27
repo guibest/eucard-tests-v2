@@ -64,7 +64,7 @@ Login User Gui
 Login User Teste 224
 
     Wait Until Element Is Visible    //android.widget.EditText[@text="Digite seu CPF"]    15 
-    Input Text   //android.widget.EditText[@text="Digite seu CPF"]   224.408.850-29  
+    Input Text   //android.widget.EditText[@text="Digite seu CPF"]   557.693.720-10  
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_padrao}
     Click Element   ${botao_Entrar}
 
