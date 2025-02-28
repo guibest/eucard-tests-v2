@@ -18,3 +18,4 @@ Resource    resources/pages/unlock_card.robot
 Resource    resources/pages/export_statement.robot
 Resource    resources/pages/bill_payment.robot
 Resource    resources/pages/transfer_update _balance.robot
+Resource    resources/pages/swipe_home.robot

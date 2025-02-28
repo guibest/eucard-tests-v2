@@ -79,8 +79,9 @@ ${text_multiconvenio}   //android.widget.TextView[@text="MULTICONVENIO"]
 #Variaveis do Android ao abrir o aplicativo
 ${salvar_login_senha}    //android.widget.Button[@resource-id="android:id/autofill_save_yes"]
 ${noticacaoes}    //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+                
 ${btns_Allow}    //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_foreground_only_button"]
-${btn_preciso}    //android.widget.RadioButton[@resource-id="com.android.permissioncontroller:id/permission_location_accuracy_radio_fine"]
+${btn_preciso}    //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_deny_button"]
 
 
 #Variaveis para Adicionar novo cartão Pior Fluxo

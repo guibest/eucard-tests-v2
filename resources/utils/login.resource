@@ -38,12 +38,14 @@ Login User Teste
     Input Text   //android.widget.EditText[@text="Digite sua senha"]   ${password_conta_teste}
     Click Element   ${botao_Entrar}
 
-    #Wait Until Element Is Visible    ${btn_preciso}
-    #Click Element    ${btn_preciso}
+    Wait Until Element Is Visible    ${btn_preciso}
+    Click Element    ${btn_preciso}
     #Wait Until Element Is Visible    ${btns_Allow}
     #Click Element    ${btns_Allow} 
     Wait Until Element Is Visible    ${noticacaoes}
     Click Element    ${noticacaoes}
+    Wait Until Element Is Visible    //com.horcrux.svg.PathView
+    Click Element    //com.horcrux.svg.PathView
 
 Login User Gui
 

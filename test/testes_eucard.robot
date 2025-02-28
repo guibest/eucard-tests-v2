@@ -5,8 +5,8 @@ Resource    ../resources/utils/login.resource
 Test Setup    OpenEucard
 *** Test Cases ***
 
-Cenário: Add Card delet Card   
-    Login User Teste 224
+Cenário: Fluxo Completo Add Transfer Delet 
+    Login User Gui
     Adicionar Cartão
     Bloqueio Cartão
     Desbloqueio Cartão
@@ -27,4 +27,5 @@ Cenário: Pagamento de boleto
 
 Cenário: Swipe
     Login User Gui
-    Exportar Extrato
+    Swipe Tela Test
+    
