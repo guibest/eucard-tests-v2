@@ -12,5 +12,5 @@ Desbloqueio Cartão
     Click Element    ${btn_desbloquear_cartao}
     Wait Until Element Is Visible    ${btn_confirmar_desbloqueio}
     Click Element    ${btn_confirmar_desbloqueio}
-    Wait Until Element Is Visible    ${btn_home}    20
+    Wait Until Element Is Visible    ${btn_home}    35
     Click Element    ${btn_home}

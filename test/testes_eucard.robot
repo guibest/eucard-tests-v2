@@ -7,7 +7,7 @@ Test Setup    OpenEucard
 
 Cenário: Add Card delet Card   
     Login User Teste 224
-    Adicionar Cartão - Fluxo Completo
+    Adicionar Cartão
     Bloqueio Cartão
     Desbloqueio Cartão
     Transferencia
@@ -24,3 +24,7 @@ Cenário: Transferecia e Update
 Cenário: Pagamento de boleto
     Login User Gui
     Pagamento Boleto
+
+Cenário: Swipe
+    Login User Gui
+    Exportar Extrato

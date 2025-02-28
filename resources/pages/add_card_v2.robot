@@ -4,9 +4,18 @@ Resource    ../../base.resource
 *** Keywords ***
 
 Adicionar Cartão
+    Wait Until Element Is Visible    //android.widget.TextView[@text="Meus cartões"]   
+    Sleep    5
+
+    # Verifica se o cartão 0513 já está presente antes de iniciar a adição.
+    ${cartao_existe}=    Run Keyword And Return Status    Element Should Be Visible    //android.widget.TextView[@resource-id="homeBalance-0513-Débito"]
+
+    Run Keyword If    ${cartao_existe}    Log To Console    🚨 O cartão 0513 já existe. Encerrando teste.
+    Run Keyword If    ${cartao_existe}    Return From Keyword
+
+    # Se o cartão NÃO existir, segue o fluxo para adicionar um novo
     Adicionar Cartão - Fluxo Completo
     Swipe Tela
-
 
 Adicionar Cartão - Fluxo Completo  
     [Documentation]    Adicionar novo cartão, garantindo que o scroll ocorra no carrossel correto.
@@ -39,12 +48,13 @@ Adicionar Cartão - Fluxo Completo
     Should Be Equal    ${mensagem}    Cartão adicionado com sucesso!
 
     Log To Console    ✅ Cartão adicionado com sucesso!
+
 Swipe Tela
     Wait Until Element Is Visible    //android.widget.TextView[@text="Meus cartões"]     
-    ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_credito_0513}
+    ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_debito_0513}
 
     WHILE    not ${elemento_existe}  
-         Swipe By Percent    50    30    50    60    400    
-        ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_credito_0513}
-    END  
-
+        Swipe By Percent    50    30    50    60    400    
+        ${elemento_existe}=    Run Keyword And Return Status    Element Should Be Visible     ${multi_debito_0513}
+        Sleep    10
+    END

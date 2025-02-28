@@ -12,3 +12,4 @@ Exportar Extrato
     Wait Until Element Is Visible    ${btn_extrato}    15
     Click Element    ${btn_extrato}
     
+    
