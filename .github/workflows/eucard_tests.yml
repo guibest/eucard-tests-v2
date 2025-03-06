@@ -1,0 +1,51 @@
+name: Android Appium Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código-fonte
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openjdk-11-jdk python3 python3-pip unzip curl wget
+          pip3 install robotframework
+          pip3 install robotframework-appiumlibrary
+
+      - name: Instalar Node.js e Appium
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          npm install -g appium
+          appium -v
+          appium driver install uiautomator2
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Iniciar AVD (Emulador Android)
+        run: |
+          echo "Configuring AVD..."
+          echo "no" | avdmanager create avd -n test -k "system-images;android-30;google_apis;x86" --force
+          $ANDROID_HOME/emulator/emulator -avd test -no-window -no-audio -no-boot-anim &
+          adb wait-for-device
+          adb shell input keyevent 82
+
+      - name: Iniciar servidor Appium
+        run: |
+          appium --log appium.log --log-timestamp --relaxed-security &
+          sleep 10 # Aguarda o servidor subir
+
+      - name: Executar teste de Login
+        run: robot -d results -i loginuser tests/
